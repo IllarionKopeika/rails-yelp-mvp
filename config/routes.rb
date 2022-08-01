@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: "stadiums#index"
-  resources :stadiums
+  root to: "stadia#index"
+  resources :stadia do
+    resources :teams, only: [:new, :create]
+  end
 end

@@ -1,0 +1,7 @@
+<h1>⚽️ Welcome to World of Football ⚽️</h1>
+<p><%= link_to "New stadium", new_stadium_path %></p>
+<% @stadia.each do |stadium| %>
+<div class="card">
+  <h3><%= link_to stadium.name, stadium_path(stadium) %></h3>
+</div>
+<% end %>

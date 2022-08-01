@@ -1,0 +1,7 @@
+<h1>⚽️ Welcome to World of Football ⚽️</h1>
+<h3> <%= @stadium.name %> </h3>
+<h4> Location: <%= @stadium.location %> 🗺</h4>
+<h4> Capacity: <%= @stadium.capacity %> 🏟</h4>
+
+<p><%= link_to "New stadium", new_stadium_path %></p>
+<p><%= link_to "Back", stadiums_path %></p>

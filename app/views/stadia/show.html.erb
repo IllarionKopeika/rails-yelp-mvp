@@ -1,0 +1,16 @@
+<h1>⚽️ Welcome to World of Football ⚽️</h1>
+<h3><%= @stadium.name %></h3>
+<h4> Location: <%= @stadium.location %> 🗺</h4>
+<h4> Capacity: <%= @stadium.capacity %> 🏟</h4>
+<h4> Teams 🥅</h4>
+<ul class="list-group">
+  <% @stadium.teams.each do |team| %>
+    <li class="list-group-item"><%= team.name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "New stadium", new_stadium_path %></p>
+<p><%= link_to "Add team", new_stadium_team_path(@stadium) %></p>
+<p><%= link_to "Edit stadium", edit_stadium_path %></p>
+<p><%= link_to "Delete stadium", stadium_path(@stadium), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+<p><%= link_to "Back to stadiums", stadia_path %></p>

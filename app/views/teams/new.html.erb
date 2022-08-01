@@ -1,0 +1,9 @@
+<h1>⚽️ Welcome to World of Football ⚽️</h1>
+
+<%= simple_form_for [@stadium, @team] do |f| %>
+<%= f.input :name %>
+<%= f.input :squad_size %>
+<%= f.submit %>
+<% end %>
+
+<p><%= link_to "Back to stadiums", stadia_path %></p>

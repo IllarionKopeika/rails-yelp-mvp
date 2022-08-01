@@ -1,0 +1,7 @@
+<h1>⚽️ Welcome to World of Football ⚽️</h1>
+
+<%= render "form", stadium: @stadium %>
+
+<p><%= link_to "Cancel", stadium_path %></p>
+<p><%= link_to "Delete stadium", stadium_path(@stadium), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+<p><%= link_to "Back to stadiums", stadia_path %></p>
